@@ -1,11 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS  # Import CORS
-
 import os
-
 from firebase import db
-
 from chat import chat_bp
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "saathi-chat-bot-wkvw-0a3188b551b8.json"
 
 
 app = Flask(__name__)
